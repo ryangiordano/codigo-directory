@@ -1,0 +1,40 @@
+{
+  "employees":[
+    {
+      "id":0,
+      "title":"President",
+      "active":true,
+      "nameFirst":"Brian",
+      "nameLast":"Nutt",
+      "description":"CEO of Codigo",
+      "email":"panelhanger@gmail.com",
+      "phoneNumber":"(502)298-0899",
+      "extension":"",
+      "pictureLink":"http://www.gocodigo.com/images/codigo-team/Employee-Photo-Brian-1.jpg"
+    },
+    {
+      "id":1,
+      "title":"VP of Media",
+      "active":true,
+      "nameFirst":"Brandon",
+      "nameLast":"Bass",
+      "description":"Designer and marketing master",
+      "email":"thebbass@gmail.com",
+      "phoneNumber":"(502)432-0298",
+      "extension":"",
+      "pictureLink":"http://www.gocodigo.com/images/codigo-team/Employee-Photo-Brandon-1.jpg"
+    },
+    {
+      "id":2,
+      "title":"Administrative Assistant",
+      "active":true,
+      "nameFirst":"Krystal",
+      "nameLast":"Surratt",
+      "description":"Makes incredible coffee",
+      "email":"krystal.surratt@gmail.com",
+      "phoneNumber":"(502)445-9226",
+      "extension":"",
+      "pictureLink":"http://www.gocodigo.com/images/codigo-team/Employee-Photo-Krystal-1.jpg"
+    },
+  ]
+}
