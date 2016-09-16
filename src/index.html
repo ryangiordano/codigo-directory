@@ -9,9 +9,21 @@
   <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css" media="screen" title="no title">
   <link rel="stylesheet" href="src/styles.css" media="screen" >
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
 </head>
+
 <body>
   <app-root>Loading...</app-root>
 </body>
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDM984ehOyOHXRumZixgpnzykS6UPLVp30",
+    authDomain: "codigo-directory.firebaseapp.com",
+    databaseURL: "https://codigo-directory.firebaseio.com",
+    storageBucket: "codigo-directory.appspot.com",
+    messagingSenderId: "875166830193"
+  };
+  firebase.initializeApp(config);
+</script>
 </html>
