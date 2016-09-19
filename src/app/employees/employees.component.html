@@ -21,13 +21,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6" *ngFor="let employee of employees | async">
-      {{employee.name}}
+    <div class="col-md-6" *ngFor="let employee of employees">
+      {{employee.nameFirst}}
     </div>
   </div>
 </div>
 
-<!-- <div class="container">
+<div class="container">
   <div class="row">
     <div class="col-md-12">
       <h1>Add employees</h1>
@@ -35,9 +35,10 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <form class="form-group" #ngSubmit="onSubmit(f)" #f="ngForm">
-        <input type="text" name="firstName" value="">
+      <form class="form-group" >
+        <input type="text" name="nameFirst" value="" [(ngModel)]="newEmployee.nameFirst" (keyup.enter)="addEmployee()">
+        <button (click)="addEmployee()">Add</button>
       </form>
     </div>
   </div>
-</div> -->
+</div>

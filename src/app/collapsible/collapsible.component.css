@@ -1,0 +1,12 @@
+.card{
+  padding:20px;
+  border: 1px solid #656565;
+  border-radius: 5px;
+}
+.card b{
+  cursor:pointer;
+}
+.collapsible-section{
+  margin:10px;
+
+}

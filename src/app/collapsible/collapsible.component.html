@@ -1,0 +1,9 @@
+<div class="card card-strong disable-text-selection">
+    <div #cp="collapsible" collapse-on-click>
+        <b class="md-icon collapsible-indicator" *ngIf="!cp.collapsed">Click to Collapse</b>
+        <b class="md-icon collapsible-indicator" *ngIf="cp.collapsed">Click to Expand</b>
+    </div>
+    <div class="collapsible-section" *ngIf="!cp.collapsed">
+        {{ calculatedValue1 }}??
+    </div>
+</div>

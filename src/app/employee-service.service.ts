@@ -10,20 +10,19 @@ export class EmployeeService{
   dataUrl:string = "https://codigo-directory.firebaseio.com/employees";
   private searchUrl: string;
   constructor(private _http:Http) { }
-  // addEmployee(employee:Employee): EmployeeService{
-  //   if(!employee.id){
-  //     employee.id = ++this.lastId;
-  //   }
-  //   this.employees.push(employee);
-  //   return this;
-  // }
-  // //simulate deleting employee /employees/:id
+  addEmployee(employee:Employee): EmployeeService{
+    if(!employee.id){
+      employee.id = ++this.lastId;
+    }
+    this.employees.push(employee);
+    return this;
+  }
+  //simulate deleting employee /employees/:id
   // deleteEmployeeById(id: number): EmployeeService{
   //   this.employees = this.employees.filter(employee=>employee.id!==id);
   //   return this;
   // }
-  //
-  // //simulate put employee/:id
+  //simulate put employee/:id
   // updateEmployeeById(id:number, values: Object = {}): Employee{
   //   let employee = this.getEmployeeById(id);
   //   if(!employee){
@@ -32,9 +31,10 @@ export class EmployeeService{
   //   Object.assign(employee, values);
   //   return employee;
   // }
-  // getAllEmployees():Employee[]{
-  //   return this.employees;
-  // }
+  getAllEmployees(){
+    // return this.employees;
+    return this._http.get('app/data/employees.json').map(response=><Employee[]>response.json().employees)
+  }
   // getEmployeeById(id:number):Employee{
   //   return this.employees.filter(employee=>employee.id===id).pop();
   // }
@@ -43,12 +43,4 @@ export class EmployeeService{
   //   return this._http.get(this.dataUrl).map((res:Response)=>res.json);
   //
   // }
-
-  addEmployee(){
-    const body = JSON.stringify({firstName: 'firstName', lastName:'lastName'});
-    return this._http.put('https://codigo-directory.firebaseio.com/employees/employee.json',body).map(response=>response.json());
-  }
-  getEmployees(){
-    return this._http.get('https://codigo-directory.firebaseio.com/employees/employee.json').map(response=>response.json());
-  }
 }
